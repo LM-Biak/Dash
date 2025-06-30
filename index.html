@@ -15,10 +15,12 @@
             </div>
             <nav class="menu">
                 <ul>
-                    <li class="active"><a href="#"><i class="fas fa-home"></i> Home</a></li>
-                    <li><a href="#"><i class="fas fa-chart-line"></i> Analytics</a></li>
-                    <li><a href="#"><i class="fas fa-tasks"></i> Projects</a></li>
-                    <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                    <li class="active" data-target="home-section"><a href="#"><i class="fas fa-home"></i> Home</a></li>
+                    <li data-target="productivity-section"><a href="#"><i class="fas fa-tasks"></i> Productivity</a></li>
+                    <li data-target="utilities-section"><a href="#"><i class="fas fa-tools"></i> Utilities</a></li>
+                    <li data-target="entertainment-section"><a href="#"><i class="fas fa-gamepad"></i> Entertainment</a></li>
+                    <li data-target="development-section"><a href="#"><i class="fas fa-code"></i> Development</a></li>
+                    <li data-target="settings-section"><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
                 </ul>
             </nav>
             <div class="user-info">
@@ -42,44 +44,171 @@
                     <button class="theme-toggle"><i class="fas fa-moon"></i></button>
                 </div>
             </header>
-            <div class="content">
+            
+            <!-- Home Section -->
+            <div id="home-section" class="content-section">
                 <h1>Welcome to Your Dashboard</h1>
-                <div class="app-grid">
-                    <div class="app-card">
-                        <div class="app-icon"><i class="fas fa-calculator"></i></div>
-                        <h3>Calculator App</h3>
-                        <p>A simple calculator for everyday use</p>
-                        <button class="launch-btn">Launch</button>
+                
+                <!-- Saved Apps Section -->
+                <div class="section-container">
+                    <h2>Saved Apps</h2>
+                    <div class="saved-apps-grid app-grid">
+                        <!-- This will be populated by JavaScript -->
                     </div>
+                </div>
+                
+                <!-- Recent Apps Section -->
+                <div class="section-container">
+                    <h2>Recently Opened</h2>
+                    <div class="recent-apps-grid app-grid">
+                        <!-- This will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Productivity Section -->
+            <div id="productivity-section" class="content-section" style="display: none;">
+                <h1>Productivity Apps</h1>
+                <div class="app-grid">
                     <div class="app-card">
                         <div class="app-icon"><i class="fas fa-tasks"></i></div>
                         <h3>Todo List</h3>
                         <p>Manage your tasks efficiently</p>
-                        <button class="launch-btn">Launch</button>
+                        <div class="app-buttons">
+                            <button class="launch-btn">Launch</button>
+                            <button class="save-btn"><i class="fas fa-bookmark"></i></button>
+                        </div>
                     </div>
                     <div class="app-card">
                         <div class="app-icon"><i class="fas fa-calendar"></i></div>
                         <h3>Calendar</h3>
                         <p>Keep track of important dates</p>
-                        <button class="launch-btn">Launch</button>
+                        <div class="app-buttons">
+                            <button class="launch-btn">Launch</button>
+                            <button class="save-btn"><i class="fas fa-bookmark"></i></button>
+                        </div>
                     </div>
                     <div class="app-card">
                         <div class="app-icon"><i class="fas fa-sticky-note"></i></div>
                         <h3>Notes</h3>
                         <p>Quick note-taking application</p>
-                        <button class="launch-btn">Launch</button>
+                        <div class="app-buttons">
+                            <button class="launch-btn">Launch</button>
+                            <button class="save-btn"><i class="fas fa-bookmark"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Utilities Section -->
+            <div id="utilities-section" class="content-section" style="display: none;">
+                <h1>Utility Apps</h1>
+                <div class="app-grid">
+                    <div class="app-card">
+                        <div class="app-icon"><i class="fas fa-calculator"></i></div>
+                        <h3>Calculator App</h3>
+                        <p>A simple calculator for everyday use</p>
+                        <div class="app-buttons">
+                            <button class="launch-btn">Launch</button>
+                            <button class="save-btn"><i class="fas fa-bookmark"></i></button>
+                        </div>
                     </div>
                     <div class="app-card">
                         <div class="app-icon"><i class="fas fa-clock"></i></div>
                         <h3>Timer</h3>
                         <p>Countdown timer and stopwatch</p>
-                        <button class="launch-btn">Launch</button>
+                        <div class="app-buttons">
+                            <button class="launch-btn">Launch</button>
+                            <button class="save-btn"><i class="fas fa-bookmark"></i></button>
+                        </div>
                     </div>
                     <div class="app-card">
-                        <div class="app-icon"><i class="fas fa-plus"></i></div>
-                        <h3>Add New App</h3>
-                        <p>Create or add a new application</p>
-                        <button class="launch-btn">Add</button>
+                        <div class="app-icon"><i class="fas fa-compass"></i></div>
+                        <h3>Weather</h3>
+                        <p>Check current weather conditions</p>
+                        <div class="app-buttons">
+                            <button class="launch-btn">Launch</button>
+                            <button class="save-btn"><i class="fas fa-bookmark"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Entertainment Section -->
+            <div id="entertainment-section" class="content-section" style="display: none;">
+                <h1>Entertainment Apps</h1>
+                <div class="app-grid">
+                    <div class="app-card">
+                        <div class="app-icon"><i class="fas fa-music"></i></div>
+                        <h3>Music Player</h3>
+                        <p>Listen to your favorite tunes</p>
+                        <div class="app-buttons">
+                            <button class="launch-btn">Launch</button>
+                            <button class="save-btn"><i class="fas fa-bookmark"></i></button>
+                        </div>
+                    </div>
+                    <div class="app-card">
+                        <div class="app-icon"><i class="fas fa-film"></i></div>
+                        <h3>Movie Tracker</h3>
+                        <p>Keep track of movies you want to watch</p>
+                        <div class="app-buttons">
+                            <button class="launch-btn">Launch</button>
+                            <button class="save-btn"><i class="fas fa-bookmark"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Development Section -->
+            <div id="development-section" class="content-section" style="display: none;">
+                <h1>Development Tools</h1>
+                <div class="app-grid">
+                    <div class="app-card">
+                        <div class="app-icon"><i class="fas fa-code"></i></div>
+                        <h3>Code Editor</h3>
+                        <p>Simple code editor for quick edits</p>
+                        <div class="app-buttons">
+                            <button class="launch-btn">Launch</button>
+                            <button class="save-btn"><i class="fas fa-bookmark"></i></button>
+                        </div>
+                    </div>
+                    <div class="app-card">
+                        <div class="app-icon"><i class="fas fa-terminal"></i></div>
+                        <h3>Terminal</h3>
+                        <p>Command line interface</p>
+                        <div class="app-buttons">
+                            <button class="launch-btn">Launch</button>
+                            <button class="save-btn"><i class="fas fa-bookmark"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Settings Section -->
+            <div id="settings-section" class="content-section" style="display: none;">
+                <h1>Settings</h1>
+                <div class="settings-container">
+                    <div class="settings-group">
+                        <h3>Appearance</h3>
+                        <div class="setting-item">
+                            <label>Theme</label>
+                            <select>
+                                <option>Light</option>
+                                <option>Dark</option>
+                                <option>System Default</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="settings-group">
+                        <h3>Account</h3>
+                        <div class="setting-item">
+                            <label>Username</label>
+                            <input type="text" value="Luis">
+                        </div>
+                        <div class="setting-item">
+                            <label>Email</label>
+                            <input type="email" value="luis@example.com">
+                        </div>
                     </div>
                 </div>
             </div>
